@@ -6,6 +6,13 @@
     border-radius: 50px;
 }
 
+@media (max-width: 768px) {
+    #background {
+        background-image: url("https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/sweet_dream_vertical.7g16ze6umuo0.webp");
+    }
+}
+
+
 .title {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
