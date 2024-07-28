@@ -1,7 +1,8 @@
 #background {
     background-image: url("https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/dance_in_dream.6m3sw5nwna.webp");
     /* height: 100vh; */
-    margin: 3% 3% 3% 3%;
+    background-position: center;
+    margin: 2% 2% 2% 2%;
     border-radius: 50px;
 }
 
@@ -22,8 +23,32 @@
 
 .description {
     background-color: rgba(254,247,255,0.85);
-    border-radius: 50px;
+    border-radius: 30px;
     font-family: "Noto Sans", sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    transition: all 0.3s ease;
+}
+
+.description:hover .card-content {
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5));
+    border-radius: 30px;
+}
+
+.description img {
+    transition: all 0.3s ease;
+}
+
+.description:hover img {
+    transform: scale(1.1);
 }
 
 .label {
@@ -48,6 +73,23 @@
     margin: 20px 0;
   }
 
-  a {display: block;}
 
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
   
+  @keyframes blinkCursor {
+    from, to { border-color: transparent; }
+    50% { border-color: inherit; }
+  }
+  
+  .typewriter {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 0.15em solid;
+    animation: 
+      typewriter 3.5s steps(40, end),
+      blinkCursor 0.75s step-end infinite;
+  }

@@ -1,7 +1,8 @@
 #background {
   background-image: url("https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/dance_in_dream.6m3sw5nwna.webp");
+  background-position: center;
   border-radius: 50px;
-  margin: 3%;
+  margin: 2%;
 }
 
 .title {
@@ -21,8 +22,32 @@
 
 .description {
   background-color: #fef7ffd9;
-  border-radius: 50px;
+  border-radius: 30px;
   font-family: Noto Sans, sans-serif;
+  transition: all .3s;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.description:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px #0003;
+}
+
+.card-content {
+  transition: all .3s;
+}
+
+.description:hover .card-content {
+  background: linear-gradient(45deg, #ffffff1a, #ffffff80);
+  border-radius: 30px;
+}
+
+.description img {
+  transition: all .3s;
+}
+
+.description:hover img {
+  transform: scale(1.1);
 }
 
 .label {
@@ -47,7 +72,31 @@ hr {
   margin: 20px 0;
 }
 
-a {
-  display: block;
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  from, to {
+    border-color: #0000;
+  }
+
+  50% {
+    border-color: inherit;
+  }
+}
+
+.typewriter {
+  white-space: nowrap;
+  border-right: .15em solid;
+  animation: 3.5s steps(40, end) typewriter, .75s step-end infinite blinkCursor;
+  display: inline-block;
+  overflow: hidden;
 }
 /*# sourceMappingURL=index.61d3354a.css.map */
