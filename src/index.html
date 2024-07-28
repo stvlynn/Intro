@@ -11,6 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const avatar = document.getElementById('avatar');
+            const originalSrc = avatar.src;
+            const hoverSrc = avatar.getAttribute('data-hover-src');
+        
+            // 预加载悬停图片
+            const preloadImg = new Image();
+            preloadImg.src = hoverSrc;
+        
+            avatar.addEventListener('mouseenter', function() {
+                this.src = hoverSrc;
+            });
+        
+            avatar.addEventListener('mouseleave', function() {
+                this.src = originalSrc;
+            });
+        });
+        </script>
 </head>
 
 <body>
@@ -19,7 +38,9 @@
             <h2 class="title animate__animated animate__bounce">Hi, I'm</h2>
             <img src="/public/signature.svg" style="margin-left: -70px;" />
             <img id="avatar" class="box"
-                src="https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/00119-3903136696.xfcfu35amsg.webp" />
+     src="https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/00119-3903136696.xfcfu35amsg.webp" 
+     data-hover-src="https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/00119-3903136696-glass.63hcxtyhkr00.webp" />
+
         </div>
         <div class="block" style="margin-left: 2%;">
             <div class="columns is-desktop">
