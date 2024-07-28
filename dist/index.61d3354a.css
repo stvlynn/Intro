@@ -1,0 +1,53 @@
+#background {
+  background-image: url("https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/dance_in_dream.6m3sw5nwna.webp");
+  border-radius: 50px;
+  margin: 3%;
+}
+
+.title {
+  font-optical-sizing: auto;
+  color: #000;
+  font-family: Noto Sans, sans-serif;
+  font-size: 60px;
+}
+
+#avatar {
+  box-shadow: 0 1.5em 1em -.125em hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), .1), 0 0px 0 1px hsla(var(--bulma-shadow-h), var(--bulma-shadow-s), var(--bulma-shadow-l), .02);
+  border-radius: 60px;
+  width: 189px;
+  height: 189px;
+  padding: 0;
+}
+
+.description {
+  background-color: #fef7ffd9;
+  border-radius: 50px;
+  font-family: Noto Sans, sans-serif;
+}
+
+.label {
+  color: #fff;
+  background-color: #65558f;
+  border-radius: 60px;
+  padding: 10px 30px;
+}
+
+.inverted-text {
+  color: #250415;
+  mix-blend-mode: color-burn;
+  text-align: center;
+  font-size: 30px;
+}
+
+hr {
+  background-color: #e8def8;
+  border: none;
+  width: 80%;
+  height: 3px;
+  margin: 20px 0;
+}
+
+a {
+  display: block;
+}
+/*# sourceMappingURL=index.61d3354a.css.map */
