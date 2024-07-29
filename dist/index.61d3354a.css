@@ -5,6 +5,12 @@
   margin: 2%;
 }
 
+@media (width <= 768px) {
+  #background {
+    background-image: url("https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/sweet_dream_vertical.7g16ze6umuo0.webp");
+  }
+}
+
 .title {
   font-optical-sizing: auto;
   color: #000;
@@ -111,5 +117,18 @@ hr {
   animation: 3.5s steps(40, end) typewriter, .75s step-end infinite blinkCursor;
   display: inline-block;
   overflow: hidden;
+}
+
+.notification {
+  z-index: 9999;
+  text-align: center;
+  color: #fff;
+  width: auto;
+  font-family: Noto Sans, sans-serif;
+  font-size: 20px;
+  position: fixed;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /*# sourceMappingURL=index.61d3354a.css.map */

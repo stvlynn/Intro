@@ -113,3 +113,16 @@
       typewriter 3.5s steps(40, end),
       blinkCursor 0.75s step-end infinite;
   }
+
+  .notification {
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: auto;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    color: white;
+}

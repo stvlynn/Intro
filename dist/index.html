@@ -32,9 +32,45 @@
     avatar.addEventListener("mouseleave", function() {
         this.src = originalSrc;
     });
+    // 点击计数器
+    let clickCount = 0;
+    avatar.addEventListener("click", function() {
+        clickCount++;
+        showNotification(clickCount);
+    });
+    function showNotification(clickCount) {
+        const messages = [
+            "\u522B\u78B0\u6211\uFF01",
+            "\u4E0D\u8981\u78B0\u6211\u4E86\uFF01",
+            "\u518D\u78B0\u6211\u7684\u8BDD...",
+            "\u6211\u5C31\u8981...",
+            "https://www.bilibili.com/video/av786483310"
+        ];
+        if (clickCount < 5) {
+            const notification = document.createElement("div");
+            notification.className = "notification is-danger animate__animated animate__bounceInDown";
+            notification.innerHTML = `
+                        <button class="delete"></button>
+                        ${messages[clickCount - 1]}
+                    `;
+            document.body.appendChild(notification);
+            // 3秒后移除通知并添加动画类
+            setTimeout(()=>{
+                notification.classList.replace("animate__bounceInDown", "animate__bounceOutUp");
+                setTimeout(()=>{
+                    notification.remove();
+                }, 1000);
+            }, 3000);
+            // 点击删除按钮时移除通知
+            notification.querySelector(".delete").addEventListener("click", ()=>{
+                notification.remove();
+            });
+        } else window.location.href = messages[clickCount - 1];
+    }
 });
 
 </script>
+    
 </head>
 
 <body>
