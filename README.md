@@ -9,3 +9,7 @@ https://stv.lol
 ## License
 
 Apache License Version 2.0
+
+## 鸣谢
+
+感谢 @XYenon 指导我完成了部分内容
